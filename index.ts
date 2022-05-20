@@ -28,7 +28,8 @@ interface Person {
     firstName: string,
     lastName: string,
     age: number,
-    favoriteQuote: string
+    favoriteQuote: string,
+    [key: string]: any // can add additional properties -- this key has to be a string, but the value can be anything
 }
 
 const me: Person = {
@@ -46,4 +47,15 @@ console.log(me)
 //     age: 'cranberries',
 //     favoriteQuote: ['arrow', 20, '3']
 // }
+
+function pow(x: number, y: number) : string { // you can declare types of the parameters as well as the return values
+    return Math.pow(x, y).toString()
+}
+
+let number = 23
+
+function changeNumber (newNum: number) : void { // void is if you don't return anything
+    number = newNum
+    console.log(number)
+}
 

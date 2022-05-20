@@ -25,3 +25,10 @@ console.log(me);
 //     age: 'cranberries',
 //     favoriteQuote: ['arrow', 20, '3']
 // }
+function pow(x, y) {
+    return Math.pow(x, y).toString();
+}
+var number = 23;
+function changeNumber(newNum) {
+    number = newNum;
+}
