@@ -23,3 +23,27 @@ type Dumbass = 'asshole' | 'jerk' // D  umbass can only be set to those values
 let dumbass: Dumbass ;
 dumbass = 'asshole' // will work
 //dumbass = 'fun' -- won't work
+
+interface Person {
+    firstName: string,
+    lastName: string,
+    age: number,
+    favoriteQuote: string
+}
+
+const me: Person = {
+    firstName: 'Tristan',
+    lastName: 'Alie',
+    age: 32,
+    favoriteQuote: 'the cake is a lie'
+}
+
+console.log(me)
+
+// const retard: Person = { -- won't work duh
+//     firstName: 42,
+//     lastName: () => this.firstName,
+//     age: 'cranberries',
+//     favoriteQuote: ['arrow', 20, '3']
+// }
+
