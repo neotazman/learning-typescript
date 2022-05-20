@@ -59,3 +59,11 @@ function changeNumber (newNum: number) : void { // void is if you don't return a
     console.log(number)
 }
 
+const numArr: number[] = [] // it's an array that can only be typed with numbers
+const personArr: Person[] = [] // an array of person objects
+type OddlySpecific = [Person, number, string]
+const checkThisShit: OddlySpecific = [me, 2.5, 'inches thick'] // this follows the OddlySpecific type
+
+numArr.push(12)
+// numArr.push('hello')
+// numArr.push(true)
