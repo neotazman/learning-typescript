@@ -19,6 +19,13 @@ var me = {
     favoriteQuote: 'the cake is a lie'
 };
 console.log(me);
+function addAll(a, b, c) {
+    var sum = a + b;
+    if (c) {
+        sum += c;
+    }
+    return sum;
+}
 // const retard: Person = { -- won't work duh
 //     firstName: 42,
 //     lastName: () => this.firstName,
@@ -31,4 +38,21 @@ function pow(x, y) {
 var number = 23;
 function changeNumber(newNum) {
     number = newNum;
+    console.log(number);
 }
+var numArr = []; // it's an array that can only be typed with numbers
+var personArr = []; // an array of person objects
+var checkThisShit = [me, 2.5, 'inches thick']; // this follows the OddlySpecific type
+numArr.push(12);
+// numArr.push('hello')
+// numArr.push(true)
+console.log(addAll(1, 2));
+function helloWorldXTimes(num) {
+    var fullString = '';
+    for (var i = 0; i < num; i++) {
+        fullString += 'Hello World ';
+    }
+    return fullString;
+}
+
+console.log(helloWorldXTimes(5));

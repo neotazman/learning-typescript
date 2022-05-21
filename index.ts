@@ -41,6 +41,14 @@ const me: Person = {
 
 console.log(me)
 
+function addAll(a: number, b: number, c?: number): number { // "?" denotes an optional parameter
+    let sum = a + b 
+    if(c) {
+        sum += c
+    }
+    return sum
+}
+
 // const retard: Person = { -- won't work duh
 //     firstName: 42,
 //     lastName: () => this.firstName,
@@ -61,9 +69,20 @@ function changeNumber (newNum: number) : void { // void is if you don't return a
 
 const numArr: number[] = [] // it's an array that can only be typed with numbers
 const personArr: Person[] = [] // an array of person objects
-type OddlySpecific = [Person, number, string]
+type OddlySpecific = [Person, number, string?] // optional args/values must be after required 
 const checkThisShit: OddlySpecific = [me, 2.5, 'inches thick'] // this follows the OddlySpecific type
 
 numArr.push(12)
 // numArr.push('hello')
 // numArr.push(true)
+console.log(addAll(1, 2))
+
+function helloWorldXTimes (num: number): string {
+    let fullString = ''
+    for (let i = 0; i < num; i++) {
+        fullString+= 'Hello World '
+    }
+    return fullString
+}
+
+console.log(helloWorldXTimes(5))
