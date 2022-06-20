@@ -1,7 +1,7 @@
 import * as _ from 'lodash'; //
 console.log('hello world')
 
-function jklol (str) {
+function jklol (str: string): string {
     return str + '...jk lol'
 }
 
