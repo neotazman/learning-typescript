@@ -54,5 +54,6 @@ function helloWorldXTimes(num) {
     }
     return fullString;
 }
-
 console.log(helloWorldXTimes(5));
+var typescriptMatrix = function (x, y) {
+};

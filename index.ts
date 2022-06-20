@@ -86,3 +86,8 @@ function helloWorldXTimes (num: number): string {
 }
 
 console.log(helloWorldXTimes(5))
+
+
+const typescriptMatrix = (x: number[], y: number[]): any => {
+        
+}
