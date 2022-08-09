@@ -14,11 +14,11 @@ let num: any = 86; // any allows us to bypass typescript's rule for types -- try
 
 num = 'fuckyou';
 
-let whatever; // if you don't set a value when declaring a variable its type can be anything
+let whatever; // if you don't set a value when declaring a variable, its type can be anything
 whatever = 'hello world'
 whatever = 72
 
-type Dumbass = 'asshole' | 'jerk' // D  umbass can only be set to those values 
+type Dumbass = 'asshole' | 'jerk' // Dumbass can only be set to those values 
 
 let dumbass: Dumbass ;
 dumbass = 'asshole' // will work
@@ -60,7 +60,8 @@ function pow(x: number, y: number) : string { // you can declare types of the pa
     return Math.pow(x, y).toString()
 }
 
-let number = 23
+let number = 23 // when you assign a value to a let variable, typescript automatically saves the value's type to the variable
+// number = 'nevermind' // won't work ^^^
 
 function changeNumber (newNum: number) : void { // void is if you don't return anything
     number = newNum
