@@ -7,7 +7,7 @@ function jklol(str) {
 console.log(jklol('fuck you mom'));
 var num = 86; // any allows us to bypass typescript's rule for types -- try to avoid it though
 num = 'fuckyou';
-var whatever; // if you don't set a value when declaring a variable its type can be anything
+var whatever; // if you don't set a value when declaring a variable, its type can be anything
 whatever = 'hello world';
 whatever = 72;
 var dumbass;
@@ -35,7 +35,8 @@ function addAll(a, b, c) {
 function pow(x, y) {
     return Math.pow(x, y).toString();
 }
-var number = 23;
+var number = 23; // when you assign a value to a let variable, typescript automatically saves the value's type to the variable
+// number = 'nevermind' // won't work ^^^
 function changeNumber(newNum) {
     number = newNum;
     console.log(number);
@@ -54,6 +55,25 @@ function helloWorldXTimes(num) {
     }
     return fullString;
 }
-console.log(helloWorldXTimes(5));
-var typescriptMatrix = function (x, y) {
+// console.log(helloWorldXTimes(5))
+var otherGuy = {
+    name: 'whatever',
+    age: 99
 };
+var thisGuy = {
+    name: 'irrelevant',
+    age: 50
+};
+var thirdGuy = {
+    name: 'bob',
+    age: 22,
+    hobbies: ['D&D', 'Warhammer']
+};
+var activities;
+activities = ['Jump', "Action", /*45*/]; // if I want to put a number into an array of strings, i would have to declare the return value as any[] -- again, any might defeat the purpose of using typescript
+// console.log(otherGuy.name) // because I declared that the otherGuy simply returns an object, it doesn't recognize the property of the object...
+console.log(thirdGuy.name);
+for (var _i = 0, _a = thirdGuy.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toUpperCase()); // typescript doesn't complain about string methods in this loop because it knows that the hobbies are all strings
+}

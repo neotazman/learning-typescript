@@ -86,18 +86,31 @@ function helloWorldXTimes (num: number): string {
     return fullString
 }
 
-console.log(helloWorldXTimes(5))
+// console.log(helloWorldXTimes(5))
 
 const otherGuy: object = { // you can declare that the return value will be an object 
     name: 'whatever',
     age: 99,
 }
 const thisGuy: {// you can also declare a specific kind of object to be returned
-    name: string;
+    name: string; // when declaring types for object properties, use semicolons ";" instead of commas ","
     age: number;
 } = { // declare an empty object "{}" as the return value, it will do the same as the otherGuy
     name: 'irrelevant',
     age: 50,
 }
+const thirdGuy = { // it's best practice to let typescript infer the object type
+    name: 'bob',
+    age: 22,
+    hobbies: ['D&D', 'Warhammer']
+}
+
+let activities : string[];
+activities = ['Jump', "Action", /*45*/] // if I want to put a number into an array of strings, i would have to declare the return value as any[] -- again, any might defeat the purpose of using typescript
 
 // console.log(otherGuy.name) // because I declared that the otherGuy simply returns an object, it doesn't recognize the property of the object...
+console.log(thirdGuy.name)
+
+for(let hobby of thirdGuy.hobbies) {
+    console.log(hobby.toUpperCase()) // typescript doesn't complain about string methods in this loop because it knows that the hobbies are all strings
+}
