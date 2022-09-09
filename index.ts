@@ -88,7 +88,16 @@ function helloWorldXTimes (num: number): string {
 
 console.log(helloWorldXTimes(5))
 
-
-const typescriptMatrix = (x: number[], y: number[]): any => {
-        
+const otherGuy: object = { // you can declare that the return value will be an object 
+    name: 'whatever',
+    age: 99,
 }
+const thisGuy: {// you can also declare a specific kind of object to be returned
+    name: string;
+    age: number;
+} = { // declare an empty object "{}" as the return value, it will do the same as the otherGuy
+    name: 'irrelevant',
+    age: 50,
+}
+
+// console.log(otherGuy.name) // because I declared that the otherGuy simply returns an object, it doesn't recognize the property of the object...
