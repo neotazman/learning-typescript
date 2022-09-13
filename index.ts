@@ -70,7 +70,7 @@ function changeNumber (newNum: number) : void { // void is if you don't return a
 
 const numArr: number[] = [] // it's an array that can only be typed with numbers
 const personArr: Person[] = [] // an array of person objects
-type OddlySpecific = [Person, number, string?] // optional args/values must be after required 
+type OddlySpecific = [Person, number, string?] // optional args/values must be after required, "?" means optional
 const checkThisShit: OddlySpecific = [me, 2.5, 'inches thick'] // this follows the OddlySpecific type
 
 numArr.push(12)
@@ -114,3 +114,9 @@ console.log(thirdGuy.name)
 for(let hobby of thirdGuy.hobbies) {
     console.log(hobby.toUpperCase()) // typescript doesn't complain about string methods in this loop because it knows that the hobbies are all strings
 }
+
+let newTuple : [number, string] = [5, 'strips of bacon'] // can create arrays with specific values, btw a tuple is an array with a set amount of indices
+// newTuple[1] = 5 the second index has to be a string
+newTuple.push('pancakes') // push can add indices to tuples
+//newTuple = [10, 'pancakes', bacon] // but you can't set the tuple to be more values that originally designated
+
