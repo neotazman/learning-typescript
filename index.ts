@@ -1,6 +1,10 @@
 import * as _ from 'lodash'; //
 // console.log('hello world')
 
+// tsc index.ts -- to compile into javascript
+// tsc index.ts -watch or -w -- automatically compiles whenever it is changed -- kill terminal to exit watch mode
+// tsc -init -- in folder allows simply "tsc" to compile entire project
+
 function jklol (str: string): string {
     return str + '...jk lol'
 }
@@ -160,4 +164,11 @@ wtf = 50
 wtf = (num) => num
 wtf = 'fuckyou'
 let name : string
-// name = wtf // "unknown" is different from "any" in that
+// name = wtf // "unknown" is different from "any" in that it doesn't infer the type of what is stored. even though wtf is a string when name is set to wtf, wtf is saved as unknown and name won't take unknown when it should take a string -- shouldn't be used often, but is better than using any
+
+function generateError(message: string, code: number) : never { // never means it never returns anything -- i don't fully understand the difference between void and never
+    throw {message: message, errorCode: code}
+}
+
+let res = generateError('error', 666)
+console.log(res)
